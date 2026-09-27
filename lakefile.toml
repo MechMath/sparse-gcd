@@ -1,0 +1,23 @@
+name = "sparseGcd"
+version = "0.1.0"
+defaultTargets = ["SparseGcd", "sparseGcd"]
+
+# Toolchain: leanprover/lean4:v4.34.0-rc2 (pinned to complexitylib's toolchain).
+# complexitylib pinned at commit edd0e9ec3d7d2eb00afa978338e8585a4eab8152 (2026-09-05).
+# mathlib is inherited transitively from complexitylib at rev e06eff5f95374108acfaf19f1ff7473aa7771df2.
+
+[[require]]
+name = "complexitylib"
+git = "https://github.com/SamuelSchlesinger/complexitylib"
+rev = "edd0e9ec3d7d2eb00afa978338e8585a4eab8152"
+
+# Support modules shared with the companion formalization of arXiv:2606.12130.
+[[lean_lib]]
+name = "SparseDivComplexity"
+
+[[lean_lib]]
+name = "SparseGcd"
+
+[[lean_exe]]
+name = "sparseGcd"
+root = "Main"

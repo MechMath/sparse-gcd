@@ -1,0 +1,51 @@
+SAT_mem_BPP_of_gcdSolver : ∀ (C : PrimeConstruction) (S : GcdSolver), Complexity.SAT.language ∈ Complexity.BPP
+'SparseGcd.SAT_mem_BPP_of_gcdSolver' depends on axioms: [propext, Classical.choice, Quot.sound]
+NP_subset_BPP_of_gcdSolver : ∀ (C : PrimeConstruction) (S : GcdSolver), Complexity.NP ⊆ Complexity.BPP
+'SparseGcd.NP_subset_BPP_of_gcdSolver' depends on axioms: [propext, Classical.choice, Quot.sound]
+no_gcdSolver_of_NP_not_subset_BPP : ∀ (C : PrimeConstruction), ¬Complexity.NP ⊆ Complexity.BPP → IsEmpty GcdSolver
+'SparseGcd.no_gcdSolver_of_NP_not_subset_BPP' depends on axioms: [propext, Classical.choice, Quot.sound]
+SAT_mem_BPP_of_promiseBPP_rou : ∀ (C : PrimeConstruction),
+  SparseDiv.PromiseBPP rouPromise → Complexity.SAT.language ∈ Complexity.BPP
+'SparseGcd.SAT_mem_BPP_of_promiseBPP_rou' depends on axioms: [propext, Classical.choice, Quot.sound]
+NP_subset_BPP_of_promiseBPP_rou : ∀ (C : PrimeConstruction),
+  SparseDiv.PromiseBPP rouPromise → Complexity.NP ⊆ Complexity.BPP
+'SparseGcd.NP_subset_BPP_of_promiseBPP_rou' depends on axioms: [propext, Classical.choice, Quot.sound]
+NP_subset_BPP_of_rou_mem_P : ∀ (C : PrimeConstruction), RootsOfUnity ∈ Complexity.P → Complexity.NP ⊆ Complexity.BPP
+'SparseGcd.NP_subset_BPP_of_rou_mem_P' depends on axioms: [propext, Classical.choice, Quot.sound]
+NP_subset_BPP_of_rou_mem_BPP : ∀ (C : PrimeConstruction), RootsOfUnity ∈ Complexity.BPP → Complexity.NP ⊆ Complexity.BPP
+'SparseGcd.NP_subset_BPP_of_rou_mem_BPP' depends on axioms: [propext, Classical.choice, Quot.sound]
+rou_not_promiseBPP_of_NP_not_subset_BPP : ∀ (C : PrimeConstruction),
+  ¬Complexity.NP ⊆ Complexity.BPP → ¬SparseDiv.PromiseBPP rouPromise
+'SparseGcd.rou_not_promiseBPP_of_NP_not_subset_BPP' depends on axioms: [propext, Classical.choice, Quot.sound]
+rou_not_mem_P_of_NP_not_subset_BPP : ∀ (C : PrimeConstruction),
+  ¬Complexity.NP ⊆ Complexity.BPP → RootsOfUnity ∉ Complexity.P
+'SparseGcd.rou_not_mem_P_of_NP_not_subset_BPP' depends on axioms: [propext, Classical.choice, Quot.sound]
+NP_subset_BPP_of_SAT_mem_BPP : Complexity.SAT.language ∈ Complexity.BPP → Complexity.NP ⊆ Complexity.BPP
+'SparseGcd.NP_subset_BPP_of_SAT_mem_BPP' depends on axioms: [propext, Classical.choice, Quot.sound]
+GcdSolver : Type 1
+PrimeConstruction : Type
+DegreeOracle : Type
+rouPromise : Complexity.PromiseProblem
+RootsOfUnity : Complexity.Language
+'SparseGcd.eventProb_isolatingSeeds_ge' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseGcd.eventProb_isolateSeed_unique_ge' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseGcd.isolate_unsat' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseGcd.card_solutions_of_windowExt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseGcd.PrimePackage.E_div_p_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseGcd.card_goodBases_ge' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseGcd.totient_div_ge' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseGcd.RootData.commonZeros_constraintPolys' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseGcd.RootData.existsUnique_coeff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseGcd.RootData.monicGcd_of_success' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseGcd.RootData.length_Hterms_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseGcd.eventProb_bitsVal_mod_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseGcd.eventProb_compressionFail_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseGcd.eventProb_findOmega_none_le_tenth' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseGcd.clockedSolver_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseGcd.gcdOracle' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseGcd.rouOracle' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseGcd.DegreeOracle.eventProb_trialAccept_le_of_unsat' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseGcd.DegreeOracle.eventProb_trialAccept_ge_of_sat' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseGcd.DegreeOracle.randomTapeSolves_SAT' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseGcd.DegreeOracle.verdictStr_mem_FP' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SparseGcd.DegreeOracle.SAT_mem_BPP' depends on axioms: [propext, Classical.choice, Quot.sound]
